@@ -1,6 +1,7 @@
 #include "machine-graphics.h"
 
 MG::MG(int _pin_cs, int _pin_dc, int _pin_res) :
+		page_cnt(8),
 		pin_cs(_pin_cs),
 		pin_dc(_pin_dc),
 		pin_res(_pin_rst) {}
@@ -19,7 +20,9 @@ void MG::drawPixel(int x, int y) {}
 void MG::setupDisplay() {
 
 }
-void MG::setupBuffer() {}
+void MG::setupBuffer() {
+	buffer = malloc(1024)
+}
 
 void MG::resetDisplay()	{
 	// Set High
@@ -36,9 +39,9 @@ void MG::resetDisplay()	{
 }
 
 void MG::ioReset() {
-
+	// Do reset stuff
 }
 
 void MG::ioDelay() {
-
+	// Do delay stuff
 }

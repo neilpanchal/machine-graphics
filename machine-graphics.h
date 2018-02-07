@@ -7,6 +7,7 @@
 class MG {
 protected:
 	int* buffer;
+	int page_cnt;
 	int pin_cs;
 	int pin_dc;
 	int pin_rst;
